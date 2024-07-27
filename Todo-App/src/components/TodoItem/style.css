@@ -1,0 +1,191 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:100,200,300,regular,500,600,700,800,900);
+
+.todo-item-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border-radius: 3px;
+    background-color: #ff8534a2;
+    width: 100%;
+}
+
+.completed {
+    background-color: #00c00a9a;
+}
+
+.sl-no {
+    margin-right: 3px;
+    color: #7e7e7e;
+}
+
+.text-container {
+    width: 80%;
+    overflow: auto;
+    margin-right: 15px;
+    white-space: nowrap;
+}
+
+.todo-item {
+    font-family: "Roboto Slab", serif;
+    font-size: 16px;
+    font-style: normal;
+    color: #000000;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: auto;
+    column-gap: 10px;
+    row-gap: 8px;
+}
+
+.btn {
+    font-family: "Roboto Slab", serif;
+    font-size: 10px;
+    font-style: normal;
+    border: none;
+    border-radius: 2px;
+    padding: 6px 0;
+    width: 60px;
+    cursor: pointer;
+    transition: button 0.3s ease;
+}
+
+.complete-button {
+
+    color: #000000;
+    background-color: #009c089a;
+
+}
+
+.pending {
+    background-color: #2e42fa;
+    color: #ffffff;
+}
+
+.delete-button {
+    color: #ffffff;
+    background-color: #ff0000;
+}
+
+
+.delete-button:hover,
+.complete-button:hover {
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Custom, iPhone Retina */
+
+@media only screen and (max-width : 320px) {
+    .todo-item-container {
+        flex-direction: column;
+        margin: 5px 0;
+    }
+
+    .button-container {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+            flex-wrap: wrap;
+        margin-top: 8px;
+        width: 100%;
+    }
+
+    .todo-item {
+        font-size: 14px;
+    }
+
+    .btn {
+        font-size: 9px;
+        padding: 4px 0;
+        width: 50px;
+    }
+}
+
+@media only screen and (min-width : 320px) {
+    .todo-item-container {
+        flex-direction: column;
+        margin: 5px 0;
+    }
+
+    .button-container {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 8px;
+    }
+
+    .todo-item {
+        font-size: 16px;
+    }
+
+    .btn {
+        font-size: 10px;
+        padding: 6px 0;
+        width: 55px;
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+    .todo-item-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .button-container {
+        margin-top: 0;
+    }
+
+    .todo-item {
+        font-size: 20px;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 6px 0;
+        width: 75px;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+    .todo-item {
+        font-size: 24px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 5px 0;
+        width: 85px;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+    .todo-item {
+        font-size: 26px;
+    }
+
+    .btn {
+        font-size: 18px;
+        padding: 6px 0;
+        width: 120px;
+    }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+    .todo-item {
+        font-size: 28px;
+    }
+
+    .btn {
+        font-size: 18px;
+        width: 130px;
+    }
+}

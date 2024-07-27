@@ -1,0 +1,307 @@
+@import url(https://fonts.googleapis.com/css?family=Merriweather:300,300italic,regular,italic,700,700italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Wittgenstein:regular,500,600,700,800,900,italic,500italic,600italic,700italic,800italic,900italic);
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4em 1em;
+  background-color: #faebd7;
+}
+
+.heading {
+  font-family: "Merriweather", serif;
+  font-size: 20px;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 3rem;
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 10px;
+  /* background-color: #a3a3a3; */
+  width: 100%;
+  max-width: 600px;
+}
+
+.input {
+  font-family: "Merriweather", serif;
+  font-size: 14px;
+  padding: 6px 0 6px 8px;
+  width: 80%;
+  outline: none;
+  border-radius: 4px;
+  border: 2px solid #00000060;
+  transition: border-color 0.2s ease;
+}
+
+.input:focus {
+  border: 2px solid #000000;
+}
+
+.add-button {
+  font-family: "Merriweather", serif;
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: none;
+  background-color: #000000;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 600px;
+  min-height: 350px;
+  background-color: #ffffff;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 2.5em;
+}
+
+.todo-heading {
+  font-family: "Merriweather", serif;
+  font-size: 20px;
+  text-align: center;
+  color: #000000;
+  margin: 0 0 0.7rem 0;
+}
+
+.todo-count {
+  font-family: "Wittgenstein", serif;
+  color: #990000;
+  margin-right: 5px;
+}
+
+
+.no-todo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 350px;
+}
+
+.no-todo {
+  font-family: "Wittgenstein", serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #2f00ff;
+  text-align: center;
+  background-color: #ffeac3;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+/* Media Query Section */
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+  .heading {
+    font-size: min(20px, 12vw);
+  }
+
+  .input {
+    font-size: 12px;
+  }
+
+  .input-container {
+    overflow: auto;
+  }
+
+  .add-button {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .todo-heading {
+    font-size: 16px;
+  }
+
+  .todo-container {
+    min-height: 250px;
+    overflow: auto;
+  }
+
+  .no-todo-container {
+    min-height: 150px;
+  }
+
+  .no-todo {
+    font-size: 12px;
+  }
+
+}
+
+@media only screen and (min-width : 320px) {
+  .heading {
+    font-size: 22px;
+  }
+
+  .input {
+    font-size: 16px;
+  }
+
+  .add-button {
+    font-size: 16px;
+  }
+
+  .todo-heading {
+    font-size: 18px;
+  }
+
+  .todo-container {
+    min-height: 300px;
+  }
+
+  .no-todo-container {
+    min-height: 200px;
+  }
+
+  .no-todo {
+    font-size: 16px;
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+  .heading {
+    font-size: 28px;
+  }
+
+  .input {
+    font-size: 18px;
+  }
+
+  .add-button {
+    font-size: 18px;
+  }
+
+  .todo-heading {
+    font-size: 20px;
+  }
+
+  .todo-container {
+    min-height: 320px;
+  }
+
+  .no-todo-container {
+    min-height: 220px;
+  }
+
+  .no-todo {
+    font-size: 18px;
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+  .heading {
+    font-size: 30px;
+  }
+
+  .input {
+    font-size: 20px;
+  }
+
+  .add-button {
+    font-size: 20px;
+  }
+
+  .todo-heading {
+    font-size: 22px;
+  }
+
+  .todo-container {
+    min-height: 340px;
+  }
+
+  .no-todo-container {
+    min-height: 240px;
+  }
+
+  .no-todo {
+    font-size: 20px;
+  }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+  .heading {
+    font-size: 36px;
+  }
+
+  .input {
+    font-size: 22px;
+  }
+
+  .add-button {
+    font-size: 22px;
+  }
+
+  .todo-heading {
+    font-size: 24px;
+  }
+
+  .todo-container {
+    min-height: 360px;
+  }
+
+  .no-todo-container {
+    min-height: 260px;
+  }
+
+  .no-todo {
+    font-size: 22px;
+  }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+  .heading {
+    font-size: 40px;
+  }
+
+  .input {
+    font-size: 24px;
+  }
+
+  .add-button {
+    font-size: 24px;
+  }
+
+  .todo-heading {
+    font-size: 26px;
+  }
+
+  .todo-container {
+    min-height: 380px;
+  }
+
+  .no-todo-container {
+    min-height: 280px;
+  }
+
+  .no-todo {
+    font-size: 24px;
+  }
+}
